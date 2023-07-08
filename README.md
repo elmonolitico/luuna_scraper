@@ -10,7 +10,8 @@ This is a Python script that scrapes product data from the MercadoLibre marketpl
 ## Installation
 
 1. Clone the repository or download the script to your local machine.
-2. Install the required dependencies by running the following command:
+2. Install the required library dependencies from requirements.txt
+3. Modify as needed
 
 
 ## Configuration
@@ -18,16 +19,15 @@ This is a Python script that scrapes product data from the MercadoLibre marketpl
 Before running the script, make sure to set up the following configurations:
 
 1. Modify the `merchant` variable in the `scrape_mercadolibre` function to match the desired MercadoLibre merchant.
-2. Set up environment variables for the API access:
+2. Set up environment variables in Lambda Console for the API access:
 - `API_TOKEN`: API access token.
 - `API_URL`: URL of the API to upload the data to.
+3. Deploy the script in Lambda and Configure schedule as needed in Lambda Console
+4. The MongoDB API will receive Mercado Libre's open api Payload
 
 ## Usage
 
-To run the script, execute the following command:
-
-
-The script will scrape product data from MercadoLibre, add a timestamp to each product, and upload the data to the specified API. The output will include the scraped data along with a success or failure message for the data upload.
+The script will scrape product data from MercadoLibre, add a timestamp to each product, and upload the data to the specified API. The output will include the scraped data along with a success or failure message for the data upload. Once data is in MongoDB you can long into your services and create Visualization in a Dashboard made publically available.
 
 ## Error Handling
 
